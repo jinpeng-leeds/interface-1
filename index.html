@@ -285,7 +285,7 @@
             <div class="image-content" ref="imageContent" @mousedown="startDrag" @mousemove="onDrag" @mouseup="endDrag"
                 @mouseleave="endDrag" @click="handleImageClick($event)">
                  <div :class="['draggable-img-wrapper', {dragging: isDragging}]"
-                    :style="{transform: 'translate(' + imgOffset.x + 'px, ' + imgOffset.y + 'px)'}">
+                    :style="{transform: 'translate(' + imgOffset.x + 'px, ' + imgOffset.y + 'px)scale(' + zoomLevel + ')'}">
                     <img class="draggable-img" ref="draggableImg" src="image/bgc.jpg" draggable="false" />
                 </div>
                 <div v-for="(point, idx) in commentPoints" :key="idx"
